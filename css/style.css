@@ -1,0 +1,685 @@
+@charset "UTF-8";
+
+/*================================================
+ *  CSSリセット
+ ================================================*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;font-weight:normal;}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/*================================================
+ *  一般・共通設定
+ ================================================*/
+body {
+    width:100%;
+    margin:0 auto;
+    font-size:14px;
+    color:#382400;
+    font-family:"メイリオ",Meiryo,"ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Osaka,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+    line-height:1.6;
+}
+
+header {
+    width:940px;
+    margin:10px auto;
+}
+
+nav {
+    width:100%;
+}
+
+#contents {
+    width:940px;
+    margin:10px auto;
+}
+
+#main {
+    float:right;
+    width:620px;
+}
+
+#sub {
+    float:left;
+    width:300px;
+}
+
+#subnav {
+    display:none;
+}
+
+section {
+    margin-bottom:50px;
+}
+
+a {
+    color:#000;
+}
+a:hover {
+    color:#e78f00;
+}
+
+h1 {
+    color:#f19500;;
+    font-size:28px;
+    line-height:1.2;
+}
+h1 a {
+    color:#000;
+    text-decoration:none;
+}
+h1 a:hover {
+    color:#e78f00;
+    text-decoration:underline;
+}
+
+h2 {
+    margin-bottom:0.5em;
+    padding-left:10px;
+    font-size:18px;
+    color:#000;
+    border-left:5px solid #e78f00;
+}
+
+h3 {
+    margin-bottom:0.5em;
+    padding:2px 5px;
+    color:#e78f00;
+    font-size:16px;
+    border-bottom:1px solid #e78f00;
+}
+
+h4 {
+    margin-bottom:0.25em;
+    font-size:16px;
+    color:#333;
+}
+h4:before {
+    content:"\002605";
+    color:#f19500;
+}
+
+h5 {
+    margin-bottom:0.25em;
+    padding:2px;
+    color:#000;
+    font-size:16px;
+    border-top:1px dotted #999;
+    border-bottom:1px dotted #999;
+    background:#f1f1f1;
+}
+
+h6 {
+    margin-bottom:0.25em;
+    color:#382400;
+    font-size:14px;
+    font-weight:bold;
+}
+
+p {
+    margin:0 0 1em 0;
+}
+
+img {
+    vertical-align:bottom;
+}
+
+em {
+    font-weight:bold;
+}
+
+strong {
+    font-weight:bold;
+    color:#f19500;
+}
+
+pre {
+    margin:1em 0;
+    padding:1em;
+}
+
+blockquote {
+    margin-bottom:1em;
+    padding:1em;
+    border:1px dotted #ddd;
+    border-left:5px solid #ddd;
+}
+
+ul,ol,dl {
+    margin:0 0 1em 0;
+}
+ul li {
+    list-style:disc;
+}
+ol li {
+    list-style:decimal;
+}
+li {
+    margin-left:2em;
+}
+
+dt {
+    margin-bottom:0.5em;
+    border-bottom:1px dotted #ddd;
+}
+dt:before {
+    content:"\0025a0";
+}
+dd {
+    margin-bottom:1em;
+}
+
+table {
+    width:100%;
+    margin-bottom:1em;
+    border-collapse:collapse;
+    border:1px solid #ddd;
+}
+th {
+    padding:10px;
+    text-align:center;
+    vertical-align:middle;
+    border:1px solid #ddd;
+    background:#f5f5f5;
+}
+td {
+    padding:10px;
+    text-align:left;
+    border:1px solid #ddd;
+}
+
+/*================================================
+ *  ヘッダー
+ ================================================*/
+header {
+    position:relative;
+}
+header h1 {
+    margin-bottom:20px;
+}
+
+.contact {
+    position:absolute;
+    top:0;
+    right:0;
+    vertical-align:top;
+
+}
+
+.contact a {
+    display:block;
+    padding:5px 10px 5px 29px;
+    color:#fff;
+    background:#f19500;
+    border-radius:4px;
+    text-decoration:none;
+    background:#f19500 url(../images/mail.png) 10px 50% no-repeat;
+}
+
+.contact a:hover {
+    color:#fff;
+    background:#e78f00 url(../images/mail.png) 10px 50% no-repeat;
+}
+
+.summary {
+    clear:both;
+}
+
+/*================================================
+ *  グローバルナビゲーション
+ ================================================*/
+nav {
+    margin-bottom:10px;
+    padding:0;
+    background:#f7f5f1;
+    overflow:hidden;
+}
+nav ul {
+    width:940px;
+    margin:0 auto;
+    padding:0;
+}
+nav li {
+    float:left;
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+nav li a {
+    display:block;
+    width:157px;
+    padding:10px 0;
+    color:#000;
+    text-align:center;
+    text-decoration:none;
+}
+nav li:first-child a {
+    width:155px;
+}
+nav li a:hover {
+    color:#000;
+    text-decoration:none;
+    background:#ddd;
+}
+
+/*================================================
+ *  サブコンテンツ
+ ================================================*/
+.submenu li {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.submenu li a:before {
+    content:"\0025a0";
+    color:#000;
+}
+
+
+.submenu li a {
+    display:block;
+    padding:5px 2px;
+    color:#000;
+    border-bottom:1px dotted #ddd;
+    text-decoration:none;
+}
+.submenu li a:hover {
+    background:#eee;
+}
+
+.bnr li {
+    margin:0 0 10px 0;
+    padding:0;
+    list-style:none;
+}
+.bnr li a:hover {
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    -ms-filter:"alpha( opacity=80 )";
+}
+.bnr img {
+    width:300px;
+}
+
+/*================================================
+ *  フッター
+ ================================================*/
+footer {
+    clear:both;
+}
+
+.footmenu {
+    width:100%;
+    padding:20px 0;
+    overflow:hidden;
+    border-top:1px dotted #ccc;
+    border-bottom:1px dotted #ccc;
+}
+.footmenu ul {
+    position:relative;
+    float:left;
+    left:50%;
+    margin:0;
+}
+.footmenu li {
+    position:relative;
+    left:-50%;
+    float:left;
+    list-style:none;
+    padding:0 10px;
+    font-size:12px;
+    text-align:center;
+}
+
+.copyright {
+    clear:both;
+    padding:20px 0;
+    font-size:11px;
+    text-align:center;
+}
+
+/*================================================
+ *  ページトップへの戻り
+ ================================================*/
+.totop {
+    position:fixed;
+    bottom:15px;
+    right:15px;
+}
+.totop a {
+    display:block;
+    text-decoration:none;
+}
+.totop img {
+    background:#f19500;
+}
+.totop img:hover {
+    background:#e78f00;
+}
+
+/*================================================
+ *  クラス
+ ================================================*/
+.textL {
+    text-align:left;
+}
+
+.textR {
+    text-align:right;
+}
+
+.list {
+    padding:0 0 0 0.5em;
+}
+
+.list li {
+    margin:0;
+    padding:0 0 0 15px;
+    list-style:none;
+    background:url(../images/check.png) 0 5px no-repeat;
+}
+
+.photo {
+    overflow:hidden;
+    margin:20px 0;
+    padding:10px;
+    border:5px solid #ddd;
+    background:#fff;
+}
+
+.imgL {
+    float:left;
+    margin:0 10px 10px 0;
+}
+
+.imgR {
+    float:right;
+    margin:0 0 10px 10px;
+}
+
+.info dt {
+    border-bottom:none;
+}
+.info dd {
+    padding-bottom:1em;
+    border-bottom:1px solid #ddd;
+}
+
+/*================================================
+ *  トップページ
+ ================================================*/
+/* スライドショー */
+.slide {
+    position:relative;
+    overflow:hidden;
+    padding-bottom:25px;
+}
+
+.slidePrev {
+    position:absolute;
+    cursor:pointer;
+    z-index:100;
+}
+
+.slideNext {
+    position:absolute;
+    cursor:pointer;
+    z-index:100;
+}
+
+.slidePrev img {
+    position:absolute;
+    width:50px !important;
+    height:60px !important;
+}
+
+.slideNext img {
+    position:absolute;
+    width:50px !important;
+    height:60px !important;
+}
+
+.slideInner {
+    position:relative;
+    margin:0;
+    padding:0;
+}
+.slideInner li {
+    float:left;
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.slideInner li img {
+    margin:0 5px;
+    padding:0;
+}
+
+.filterPrev {
+    position:absolute;
+    left:0;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    background-color:#fff;
+}
+
+.filterNext {
+    position:absolute;
+    right:0;
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    background-color:#fff;
+}
+
+.controlNav {
+      position:absolute;
+      float:left;
+      left:50%;
+      bottom:0;
+}
+.controlNav span {
+      position:relative;
+      left:-50%;
+      float:left;
+      margin:5px;
+      -webkit-border-radius:5px;
+      -moz-border-radius:5px;
+      border-radius:5px;
+      width:10px;
+      height:10px;
+      overflow:hidden;
+      background:#ccc;
+      text-indent:-9999px;
+      vertical-align:middle;
+}
+.controlNav span:hover {
+      background:#999;
+      cursor:pointer;
+}
+.controlNav span.current {
+      background:#f19500;
+}
+
+/* トップナビ */
+* html .topNavi {
+    height:1em;
+    overflow:visible;
+}
+
+.topNavi {
+    overflow:hidden;
+    position:relative;
+    margin-right:-2%;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.topNaviColumn {
+	display:inline-block; 
+    width:32%;
+    margin-right:0%;
+}
+
+.topNaviCon {
+    position:relative;
+    width:300px;
+    height:300px;   
+    display:block;
+    box-sizing:border-box;
+    overflow:hidden;
+    padding:10px;
+    text-decoration:none;
+    color:#000;
+    transition:background 0s ease 0s, border 0.5s ease-out 0s;
+    background:#f1f1f1;
+    border:1px solid #f1f1f1;
+    border-radius:4px;
+}
+
+.topNaviCon:hover {
+    color:#000;
+    background:#fff9f5 none repeat scroll 0 0;
+    border:1px solid #f19500;
+    transition:background 0s ease 0s, border 0.5s ease-out 0s;
+}
+
+.topNaviCon h2 {
+    margin:10px;
+    padding:0;
+    font-size:14px;
+    font-weight:bold;
+    color:#f19500;
+    border:none;
+}
+
+.topNaviCon:hover h2 {
+    color:#f19500;
+}
+
+.topNaviCon p {
+    margin:10px;
+}
+
+.topNaviPhoto img {
+    width:100%;
+}
+
+/*================================================
+ *  スマートフォン向けデザイン
+ ================================================*/
+@media screen and (max-width:779px) {
+    body {
+        box-sizing:border-box;
+        width:100%;
+        padding:0 10px;
+    }
+
+    header {
+        width:100%;
+    }
+
+    header h1 {
+        margin-bottom:0;
+    }
+
+    .contact {
+        position:relative;
+        float:right;
+        margin:10px 0;
+    }
+
+    #contents {
+        width:100%;
+}
+
+    #main {
+        float:none;
+        width:100%;
+    }
+
+    #sub {
+        float:none;
+        width:100%;
+    }
+
+    .bnr {
+        overflow:hidden;
+        margin-right:-2%;
+    }
+
+    .bnr li {
+        float:left;
+        width:48%;
+        margin:0 2% 2% 0;
+    }
+
+    .bnr li img {
+        width:100%;
+    }
+
+   .totop {
+    display:none !important;
+    }
+
+    /* メインメニュー */
+    nav {
+        display:block;
+        position:relative;
+        width:100%;
+    }
+    nav h3 {
+        cursor:pointer;
+        margin-bottom:0;
+        color:#fff;
+        background:#999;
+        border:none;
+    }
+    nav h3:after {
+        position:absolute;
+        content:"\0025bc";
+        top:3px;
+        right:5px;
+    }
+    nav h3.menuOpen:after {
+        position:absolute;
+        content:"\0025b2";
+        top:3px;
+        right:5px;
+    }
+    nav ul {
+        width:100%;
+    }
+
+    nav li {
+        width:33.33%;
+        margin:0;
+        padding:0;
+        list-style:none;
+    }
+    navv li a:before {
+        content:"\0025a0";
+        color:#5b4111;
+    }
+    nav li:first-child a {
+        width:100%;
+    }
+
+    nav li a {
+        display:block;
+        width:100%;
+        border-bottom:1px dotted #ddd;
+        text-decoration:none;
+    }
+
+    /* トップナビ */
+    .topNavi {
+        margin-right:0;
+    }
+
+    .topNaviColumn {
+        display:block;
+        box-sizing:border-box;
+        width:50%;
+        float:none;
+        margin-right:0;
+        margin-bottom:10px;
+    }
+
+}
